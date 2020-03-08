@@ -1,0 +1,59 @@
+@font-face {
+  font-family: tron;
+  src: url('/static/fonts/tron/TRON.TTF');
+}
+
+@font-face {
+  font-family: "eduardobarrasa";
+  src: url("/static/fonts/eduardobarrasa/Eduardo-Barrasa.ttf");
+}
+
+body {
+  display: none; /* It will be faded in by jQuery effects */
+  color: white;
+  font-family: eduardobarrasa, Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+/* https://css-tricks.com/snippets/css/transparent-background-images/ */
+body::after {
+  opacity: 0.05;
+  background-image: url('/static/img/icon_16x16.png');
+  background-repeat: repeat;
+
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+h1, h2, h3 {
+  font-family: tron, eduardobarrasa, Arial, Helvetica, sans-serif;
+}
+
+button {
+  background: rgba(0, 0, 0, .5);
+  font-family: eduardobarrasa, Arial, Helvetica, sans-serif;
+  border: 3px solid rgb(212, 253, 255);
+  border-radius: 5px;
+  box-shadow: 0 0 5px #55FFFF;
+  color: rgb(212, 253, 255);
+  cursor: pointer;
+  font-size: 20pt;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.no-select {
+  /* https://stackoverflow.com/a/4407335/11138267 */
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}

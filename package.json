@@ -1,0 +1,31 @@
+{
+  "name": "socketron",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Tron game made with Socket.IO",
+  "keywords": [
+    "game",
+    "tron"
+  ],
+  "homepage": "https://github.com/g-otn/SockeTron#readme",
+  "bugs": {
+    "url": "https://github.com/g-otn/SockeTron/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g-otn/SockeTron.git"
+  },
+  "license": "MIT",
+  "author": "g-otn (https://github.com/g-otn)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "short-uuid": "^3.1.1",
+    "shortid": "^2.2.15",
+    "socket.io": "^2.3.0"
+  }
+}

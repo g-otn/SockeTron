@@ -1,0 +1,17 @@
+const express = require('express')
+const app = express()
+const http = require('http').createServer(app)
+
+// Configuration
+app.use('/static', express.static('public'))
+app.set('view engine', 'ejs');
+
+// Routes
+app.get('/', (req, res) => {
+  res.render('room_list')
+})
+
+// Start server
+http.listen(80, () => {
+  console.log('Server listening on port 80')
+})
