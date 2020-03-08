@@ -47,6 +47,21 @@ button {
   padding-bottom: 5px;
 }
 
+a {
+  color: #E3CBF5;
+  text-decoration: none;
+  text-shadow: 0 0 5px #1C01E0;
+}
+
+a:hover {
+  color: #E3CBF5;
+  text-shadow: 0 0 5px #EB05FE;
+}
+
+a:active {
+  color: #EB05FE;
+}
+
 .no-select {
   /* https://stackoverflow.com/a/4407335/11138267 */
   -webkit-touch-callout: none; /* iOS Safari */
