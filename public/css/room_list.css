@@ -71,6 +71,11 @@ table button {
   width: 100%;
 }
 
+footer {
+  color: lightgray;
+  font-size: 10pt;
+}
+
 /* Mobile CSS */
 @media screen and (max-width: 900px) {
   .title {
@@ -94,5 +99,9 @@ table button {
 
   button {
     font-size: 3vw;
+  }
+
+  footer {
+    font-size: 1.5vw;
   }
 }
