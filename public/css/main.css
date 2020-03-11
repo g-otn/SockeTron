@@ -45,6 +45,14 @@ button {
   font-size: 20pt;
   padding-top: 5px;
   padding-bottom: 5px;
+
+  transition: box-shadow 0.75s ease, color 0.75s ease, text-shadow 0.75s ease;
+}
+
+button:hover {
+  box-shadow: 0 0 10px #FCE100;
+  color: #FDFEBB;
+  text-shadow: 0 0 10px #FCE100;
 }
 
 a {
