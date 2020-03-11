@@ -1,0 +1,1 @@
+history.replaceState(stateObj, '', "?room=hue")
