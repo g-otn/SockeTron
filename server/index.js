@@ -10,10 +10,17 @@ app.set('view engine', 'ejs')
 
 // Routes
 app.get('/', (req, res) =>     res.render('room_list'))
-app.get('/game', (req, res) => res.render('game'))
+app.get('/game', (req, res) => {
+  if (!req.query.room || !req.query.room.trim()) { // Trying to load game but no game room specified
+    res.redirect('/')
+    return
+  }
+  res.render('game')
+})
 app.get('*', (req, res) =>     res.redirect('/')) // Redirect any invalid path
 
 // Start server
-http.listen(80, () => {
-  console.log('Server listening on port 80')
+const port = 80
+http.listen(port, () => {
+  console.log('Server listening on port ' + port)
 })
