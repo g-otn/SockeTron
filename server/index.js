@@ -9,7 +9,7 @@ app.use('/static', express.static('public'))
 app.set('view engine', 'ejs')
 
 // Routes
-app.get('/', (req, res) =>     res.render('room_list'))
+app.get('/', (req, res) =>     res.render('game_list'))
 app.get('/game', (req, res) => {
   if (!req.query.room || !req.query.room.trim()) { // Trying to load game but no game room specified
     res.redirect('/')
