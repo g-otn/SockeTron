@@ -2,22 +2,24 @@ const express = require('express')
 const app = express()
 const http = require('http').createServer(app)
 
-const gameRooms = {}
+const games = {}
 
 // Configuration
 app.use('/static', express.static('public'))
 app.set('view engine', 'ejs')
 
 // Routes
-app.get('/', (req, res) =>     res.render('game_list'))
-app.get('/game', (req, res) => {
-  if (!req.query.room || !req.query.room.trim()) { // Trying to load game but no game room specified
-    res.redirect('/')
+app.get('/', (req, res) => {
+  const gameId = req.query.game
+
+  if (!gameId || !gameId.trim() || !games[gameId]) {
+    res.render('game_list')
     return
   }
-  res.render('game')
+
+  res.render('game', games[gameId])
 })
-app.get('*', (req, res) =>     res.redirect('/')) // Redirect any invalid path
+app.get('*', (req, res) =>     res.redirect('/')) // Redirect any invalid GET path
 
 // Start server
 const port = 80
