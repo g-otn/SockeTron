@@ -1,5 +1,10 @@
-const shortid = require('shortid')
+module.exports.Game = class {
 
-function GameRoom(socket) {
-  this.room = shortid.generate()
+  constructor(namespace, deleteFunction) {
+    /** @type {SocketIO.Namespace} */
+    this.nsp = namespace
+    /** @type {function} */
+    this.close = deleteFunction
+  }
+
 }
