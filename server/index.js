@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const http = require('http').createServer(app)
 const io = require('socket.io')(http)
-const shortid = require('shortid')
 const Game = require('./game').Game
 
 const games = {}
@@ -33,7 +32,7 @@ app.get('/createroom', (req, res) => {
 
   console.log('games:\n', games)
 })
-app.get('*', (req, res) =>     res.redirect('/')) // Redirect any invalid GET path
+app.get('*', (req, res) =>     res.redirect('/')) // Redirect any GET request with invalid path
 
 // Start server
 const port = 80
@@ -51,9 +50,9 @@ function createNewGame() {
 
 function generateNewGameId() {
   while (true) {
-    let gameId = shortid.generate()
-    if (!games[gameId]) {
-      return gameId
+    let newGameId = Math.floor(Math.random() * 0x10000).toString(16).padStart(4, 0) // Generates 0000 to ffff
+    if (!games[newGameId]) {
+      return newGameId
     }
   }
 }
