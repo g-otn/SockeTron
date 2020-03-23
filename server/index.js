@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 
   res.render('game', games[gameId])
 })
-app.get('/createroom', (req, res) => {
+app.get('/game/create', (req, res) => {
   if (Object.keys(games).length > 50) {
     res.send(403).send({ message: 'There are too many games already! Cannot create any more.' })
     return
@@ -42,7 +42,7 @@ http.listen(port, () => {
 
 function createNewGame() {
   const gameId = generateNewGameId()
-  const namespace = io.of(gameId)
+  const namespace = io.of('/game/' + gameId)
   const deleteFunction = () => { deleteGame(gameId) }
   games[gameId] = new Game(namespace, deleteFunction)
   return gameId
