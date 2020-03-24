@@ -4,70 +4,42 @@ body {
 
 .title {
   text-shadow: 0 0 10px #55FFFF;
-  color: rgb(212, 253, 255);
   font-family: tron, eduardobarrasa, Arial, Helvetica, sans-serif;
   font-size: 50pt;
 }
 
-table {
+.game-list {
   border-radius: 10px;
-  border: 5px solid rgb(212, 253, 255);
-  box-shadow: 0 0 10px #55FFFF;
+  border: 5px solid;
   padding: 10px;
   font-size: 18pt;
   background: rgba(0, 0, 0, 0.4);
 }
 
-th {
+.game-list th {
   color: rgb(212, 253, 255);
 }
 
-td {
+.game-list td {
   text-align: center;
   margin: 5px 10px 5px;
   padding: 0 25px 0;
 }
 
-.player-count-icons {
+.game-list td:first-child {
+  user-select: text;
+}
+
+.player-count {
   text-align: center;
-  color: rgb(212, 253, 255);
   font-size: 0;
 }
 
-.player-count-icons span {
+.player-count span {
   font-size: 40pt;
 }
 
-.player-count-icons :nth-child(1) {
-  color: rgb(212, 253, 255);
-  text-shadow: 0 0 5px #55FFFF;
-}
-.player-count-icons :nth-child(2) {
-  color: #FDFEBB;
-  text-shadow: 0 0 5px #FCE100;
-}
-.player-count-icons :nth-child(3) {
-  color: #F9FEE5;
-  text-shadow: 0 0 5px #AEEE72;
-}
-.player-count-icons :nth-child(4) {
-  /* color: #EB05FE; */
-  /* text-shadow: 0 0 5px #1C01E0; */
-  color: #E3CBF5;
-  text-shadow: 0 0 5px #EB05FE;
-}
-
-.status-waiting {
-  color: #F9FEE5;
-  text-shadow: 0 0 5px #AEEE72;
-}
-
-.status-in-progress {
-  color: #FDFEBB;
-  text-shadow: 0 0 5px #FCE100;
-}
-
-table button {
+.game-list .btn {
   width: 100%;
 }
 
@@ -82,12 +54,12 @@ footer {
     font-size: 8vw;
   }
 
-  table {
+  .game-list {
     padding: 10px;
     font-size: 3vw;
   }
 
-  td {
+  .game-list td {
     text-align: center;
     margin: 0 10px 0;
     padding: 0 0px 0;
@@ -97,7 +69,7 @@ footer {
     font-size: 6vw;
   }
 
-  button {
+  .btn {
     font-size: 3vw;
   }
 

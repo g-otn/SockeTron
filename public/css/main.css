@@ -34,7 +34,8 @@ h1, h2, h3 {
   font-family: tron, eduardobarrasa, Arial, Helvetica, sans-serif;
 }
 
-button {
+.btn {
+  display: inline-block;
   background: rgba(0, 0, 0, .5);
   font-family: eduardobarrasa, Arial, Helvetica, sans-serif;
   border: 3px solid rgb(212, 253, 255);
@@ -43,31 +44,32 @@ button {
   color: rgb(212, 253, 255);
   cursor: pointer;
   font-size: 20pt;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 8px;
+  text-shadow: none;
 
-  transition: box-shadow 0.75s ease, color 0.75s ease, text-shadow 0.75s ease;
+  transition: box-shadow .4s ease, color .4s ease, text-shadow .4s ease;
 }
 
-button:hover {
-  box-shadow: 0 0 10px #FCE100;
-  color: #FDFEBB;
-  text-shadow: 0 0 10px #FCE100;
+.btn:hover {
+  color: #AEEE72;
+  border-color: #AEEE72;
+  box-shadow: 0 0 10px #AEEE72;
+  text-shadow: none;
 }
 
 a {
-  color: #E3CBF5;
+  color: #FFF2FF;
   text-decoration: none;
   text-shadow: 0 0 5px #1C01E0;
 }
 
 a:hover {
-  color: #E3CBF5;
-  text-shadow: 0 0 5px #EB05FE;
+  color: #7A26BF;
+  text-shadow: 0 0 5px #7A26BF;
 }
 
 a:active {
-  color: #EB05FE;
+  color: #FFF2FF;
 }
 
 .no-select {
@@ -80,3 +82,31 @@ a:active {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Opera and Firefox */
 }
+
+.blue { color: #55FFFF; }
+.blue-text-shadow { text-shadow: 0 0 5px #55FFFF; }
+.blue-box { border-color: #55FFFF; box-shadow: 0 0 10px #55FFFF;}
+.blue-light { color: #E6F5F5; }
+.blue-light-text-shadow { text-shadow: 0 0 5px #55FFFF, 0 0 5px #55FFFF; }
+.blue-light-box { border-color: #E6F5F5; box-shadow: 0 0 10px #55FFFF;}
+
+.orange { color: #FCE100; }
+.orange-text-shadow { text-shadow: 0 0 5px #FCE100; }
+.orange-box { border-color: #FCE100; box-shadow: 0 0 10px #FCE100;}
+.orange-light { color: #FDFEBB; }
+.orange-light-text-shadow { text-shadow: 0 0 5px #FCE100, 0 0 5px #FCE100; }
+.orange-light-box { border-color: #FDFEBB; box-shadow: 0 0 10px #FCE100;}
+
+.green { color: #AEEE72; }
+.green-text-shadow { text-shadow: 0 0 5px #AEEE72; }
+.green-box { border-color: #AEEE72; box-shadow: 0 0 10px #AEEE72;}
+.green-light { color: #DCFDE6; }
+.green-light-text-shadow { text-shadow: 0 0 5px #AEEE72, 0 0 5px #AEEE72; }
+.green-light-box { border-color: #DCFDE6; box-shadow: 0 0 10px #AEEE72;}
+
+.purple { color: #7A26BF; }
+.purple-text-shadow { text-shadow: 0 0 5px #7A26BF, 0 0 5px #7A26BF; }
+.purple-box { border-color: #7A26BF; box-shadow: 0 0 10px #7A26BF;}
+.purple-light { color: #FFF2FF; }
+.purple-light-text-shadow { text-shadow: 0 0 5px #7A26BF, 0 0 5px #7A26BF, 0 0 5px #7A26BF; }
+.purple-light-box { border-color: #FFF2FF; box-shadow: 0 0 10px #7A26BF;}
