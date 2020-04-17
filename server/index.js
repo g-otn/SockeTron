@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const http = require('http').createServer(app)
-const io = require('socket.io')(http)
+const io = require('socket.io')(http, { pingInterval: 2000 })
 const Game = require('./game').Game
 
 const games = {}
@@ -30,7 +30,7 @@ app.get('/game/create', (req, res) => {
   const gameId = createNewGame()
   res.redirect(`/?game=${gameId}`)
 
-  console.log('games:\n', games)
+  console.log('games:\n', Object.keys(games))
 })
 app.get('*', (req, res) =>     res.redirect('/')) // Redirect any GET request with invalid path
 

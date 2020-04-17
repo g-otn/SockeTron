@@ -16,7 +16,19 @@
 <%- include('../partials/scripts_main') %>
 
 <!-- Page Scripts -->
+<script src="/socket.io/socket.io.js"></script>
 <script src="/static/js/game/main.js"></script>
 <script src="/static/js/game/renderer.js"></script>
+<script>
+  const gameId = new URLSearchParams(window.location.search).get('game')
+  const socket = io(`/${gameId}`);
+
+  socket.on('pong', function(ms) {
+    latency = ms;
+
+    console.log(latency, io);
+  });
+
+</script>
 
 </html>
